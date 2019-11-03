@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<div class="alert alert-primary" role="alert">
+  個別投稿
+</div>
+{% endblock header %}
+
+{% block content %}
+<div class="container">
+  <div class="alert alert-success" role="alert">
+    <p>タイトル：{{ object.title }}</p>
+    <p>投稿者：{{ object.author }}</p>
+    <p>内容：{{ object.content }}</p>
+    <p><img src="{{ object.images.url }}" alt="画像" width=300></p>
+
+    <a href="{% url 'boardapp:good' object.pk %}" class="btn btn-primary btn " role="button" aria-pressed="true">いいねする{{ object.good }}</a>
+    <a href="{% url 'boardapp:read' object.pk %}" class="btn btn-secondary btn" role="button" aria-pressed="true">既読にする:{{ object.read }}</a>
+  </div>
+</div>
+{% endblock content %}
