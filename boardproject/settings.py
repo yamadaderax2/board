@@ -129,5 +129,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media',)
 MEDIA_URL = '/media/'
 
 
-# CSSファイルの読み込み設定
+# ログインページの指定
 LOGIN_URL = 'boardapp:login'
